@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kYd-r0-bda">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kYd-r0-bda">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -162,10 +162,10 @@
             </objects>
             <point key="canvasLocation" x="-2012" y="246"/>
         </scene>
-        <!--View Controller-->
+        <!--Payment View Controller-->
         <scene sceneID="qOE-O3-YNU">
             <objects>
-                <viewController id="aJN-El-GoR" sceneMemberID="viewController">
+                <viewController id="aJN-El-GoR" customClass="PaymentViewController" customModule="Body" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Bm-Qi-cix"/>
                         <viewControllerLayoutGuide type="bottom" id="8KJ-Pe-yH8"/>
@@ -177,6 +177,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vga-As-xYJ">
                                 <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                             </imageView>
+<<<<<<< HEAD
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="[Payment shit]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWC-F9-OOM">
                                 <rect key="frame" x="60" y="394" width="480" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -186,36 +187,89 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKv-Pc-VMZ">
                                 <rect key="frame" x="235" y="444" width="131" height="30"/>
                                 <state key="normal" title="Join Class">
+=======
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKv-Pc-VMZ">
+                                <rect key="frame" x="234" y="428" width="131" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="7O4-D5-IKn"/>
+                                </constraints>
+                                <state key="normal" title="Join x Class">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7O4-D5-IKn"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="ttR-75-mDN" kind="show" identifier="joinClassSegue" id="xwk-vL-G9f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ON-VF-aTQ">
+                                <rect key="frame" x="351" y="390" width="46" height="30"/>
+                                <state key="normal" title="Apply">
+>>>>>>> b4b5a0ff7a90c6f43a2b25a3df45b810830adc89
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ttR-75-mDN" kind="show" id="xwk-vL-G9f"/>
+                                    <action selector="applyPromoCode" destination="aJN-El-GoR" eventType="touchUpInside" id="hCK-vu-KGd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3q-PJ-6aF">
-                                <rect key="frame" x="235" y="503" width="131" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[promo code success]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moa-0P-OgM">
+                                <rect key="frame" x="405" y="394" width="170" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Redeem promotion code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9SF-dR-eZr">
+                                <rect key="frame" x="149" y="390" width="194" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3q-PJ-6aF">
+                                <rect key="frame" x="234" y="466" width="131" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="uw5-X0-amF"/>
+                                </constraints>
                                 <state key="normal" title="Add Friend">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="uw5-X0-amF"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="addFriend" destination="aJN-El-GoR" eventType="touchUpInside" id="ONB-iS-WPt"/>
+                                </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7VL-op-iwG">
+                                <rect key="frame" x="149" y="352" width="300" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[Payment Info + Change button]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWC-F9-OOM">
+                                        <rect key="frame" x="-107" y="4" width="480" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="O3q-PJ-6aF" firstAttribute="leading" secondItem="Vff-8Y-Bct" secondAttribute="leadingMargin" constant="219" id="2Sh-Tz-arF"/>
                             <constraint firstAttribute="centerX" secondItem="O3q-PJ-6aF" secondAttribute="centerX" id="3Lo-lZ-5Wl"/>
                             <constraint firstItem="O3q-PJ-6aF" firstAttribute="leading" secondItem="Vff-8Y-Bct" secondAttribute="leadingMargin" constant="246" id="4CX-rb-uym"/>
-                            <constraint firstItem="O3q-PJ-6aF" firstAttribute="top" secondItem="aKv-Pc-VMZ" secondAttribute="bottom" constant="29" id="743-at-v28"/>
+                            <constraint firstItem="O3q-PJ-6aF" firstAttribute="top" secondItem="aKv-Pc-VMZ" secondAttribute="bottom" constant="8" id="743-at-v28"/>
                             <constraint firstAttribute="trailingMargin" secondItem="O3q-PJ-6aF" secondAttribute="trailing" constant="246" id="7h9-fI-hFl"/>
-                            <constraint firstItem="8KJ-Pe-yH8" firstAttribute="top" secondItem="O3q-PJ-6aF" secondAttribute="bottom" constant="67" id="9VE-fm-uQl"/>
+                            <constraint firstItem="8KJ-Pe-yH8" firstAttribute="top" secondItem="O3q-PJ-6aF" secondAttribute="bottom" constant="109" id="9VE-fm-uQl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aKv-Pc-VMZ" secondAttribute="trailing" constant="248" id="9Zt-Zb-qtS"/>
                             <constraint firstItem="aKv-Pc-VMZ" firstAttribute="leading" secondItem="Vff-8Y-Bct" secondAttribute="leadingMargin" constant="218" id="Kay-Rb-dDy"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="iWC-F9-OOM" secondAttribute="trailing" constant="44" id="QXG-df-vMY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="O3q-PJ-6aF" secondAttribute="trailing" constant="218" id="XNf-lp-VNm"/>
                             <constraint firstItem="aKv-Pc-VMZ" firstAttribute="leading" secondItem="Vff-8Y-Bct" secondAttribute="leadingMargin" constant="249" id="Xbc-Lb-Oes"/>
                             <constraint firstItem="vga-As-xYJ" firstAttribute="top" secondItem="4Bm-Qi-cix" secondAttribute="bottom" id="hOd-hT-zGe"/>
                             <constraint firstAttribute="trailing" secondItem="vga-As-xYJ" secondAttribute="trailing" id="nTU-Lq-8XN"/>
-                            <constraint firstItem="aKv-Pc-VMZ" firstAttribute="top" secondItem="iWC-F9-OOM" secondAttribute="bottom" constant="29" id="oqS-1U-Oit"/>
-                            <constraint firstItem="iWC-F9-OOM" firstAttribute="leading" secondItem="Vff-8Y-Bct" secondAttribute="leadingMargin" constant="44" id="pgU-PU-1Sa"/>
                             <constraint firstAttribute="bottom" secondItem="vga-As-xYJ" secondAttribute="bottom" id="qWu-zb-r03"/>
                             <constraint firstAttribute="centerX" secondItem="aKv-Pc-VMZ" secondAttribute="centerX" id="rAf-jR-dWe"/>
                             <constraint firstItem="vga-As-xYJ" firstAttribute="leading" secondItem="Vff-8Y-Bct" secondAttribute="leading" id="wGJ-aI-I3V"/>
@@ -226,14 +280,24 @@
                                 <exclude reference="9Zt-Zb-qtS"/>
                                 <exclude reference="Kay-Rb-dDy"/>
                                 <exclude reference="Xbc-Lb-Oes"/>
+                                <exclude reference="rAf-jR-dWe"/>
                                 <exclude reference="zuv-VG-qKw"/>
                                 <exclude reference="2Sh-Tz-arF"/>
+                                <exclude reference="3Lo-lZ-5Wl"/>
                                 <exclude reference="4CX-rb-uym"/>
+                                <exclude reference="743-at-v28"/>
                                 <exclude reference="7h9-fI-hFl"/>
                                 <exclude reference="XNf-lp-VNm"/>
+                                <exclude reference="9VE-fm-uQl"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="backgroundPicture" destination="vga-As-xYJ" id="Kd9-kv-X3Z"/>
+                        <outlet property="joinClassButton" destination="aKv-Pc-VMZ" id="UKR-0X-Ebo"/>
+                        <outlet property="priceLabel" destination="iWC-F9-OOM" id="SuI-V8-2q8"/>
+                        <outlet property="promoCodeText" destination="9SF-dR-eZr" id="xSW-ad-WR1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fzB-kY-lf5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -491,7 +555,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lk2-GV-jjL">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight (lbs)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lk2-GV-jjL">
                                 <rect key="frame" x="132" y="470" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="h9q-IT-Ek2"/>
