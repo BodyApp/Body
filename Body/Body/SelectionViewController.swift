@@ -58,7 +58,7 @@ class SelectionViewController: UIViewController {
         if let workoutTypeText = workoutTypeLabel.text {
             switch trainerTypeSegmentedController.selectedSegmentIndex {
             case 0: bookNowButton.setTitle("Book \(workoutTypeText) with Trainer X for $10", forState: UIControlState.Normal)
-            case 1: bookNowButton.setTitle("Book \(workoutTypeText) with Trainer Pro for $10", forState: UIControlState.Normal)
+            case 1: bookNowButton.setTitle("Book \(workoutTypeText) with Trainer Pro for $20", forState: UIControlState.Normal)
             default: break
             }
         }
