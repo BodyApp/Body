@@ -279,8 +279,8 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="v7i-nP-OmB"/>
                                         <exclude reference="p9a-Wo-Xc5"/>
+                                        <exclude reference="v7i-nP-OmB"/>
                                     </mask>
                                 </variation>
                             </imageView>
@@ -305,8 +305,8 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="vGl-cY-7n7"/>
                                         <exclude reference="Vvk-b9-VJv"/>
+                                        <exclude reference="vGl-cY-7n7"/>
                                     </mask>
                                 </variation>
                             </imageView>
@@ -318,8 +318,8 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="UKx-tK-RY0"/>
                                         <exclude reference="Fr5-uQ-iGP"/>
+                                        <exclude reference="UKx-tK-RY0"/>
                                     </mask>
                                 </variation>
                             </imageView>
@@ -589,8 +589,8 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="jq2-br-yfR"/>
                                         <exclude reference="Rvn-Lf-seC"/>
+                                        <exclude reference="jq2-br-yfR"/>
                                     </mask>
                                 </variation>
                             </imageView>
@@ -615,8 +615,8 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="dkh-oM-oyp"/>
                                         <exclude reference="Tgh-bs-is4"/>
+                                        <exclude reference="dkh-oM-oyp"/>
                                     </mask>
                                 </variation>
                             </imageView>
@@ -641,8 +641,8 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="a77-8V-Bfi"/>
                                         <exclude reference="OMU-zU-lQv"/>
+                                        <exclude reference="a77-8V-Bfi"/>
                                     </mask>
                                 </variation>
                             </imageView>
