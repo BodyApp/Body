@@ -9,11 +9,31 @@
 import UIKit
 
 class PaymentViewController: UIViewController {
+    
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var promoCodeText: UITextField!
+    @IBOutlet weak var joinClassButton: UIButton!
+    
+    
+    var classPrice : Double?
+    var backgroundPicture : UIImage?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // set background
+        if let picture = backgroundPicture {
+            backgroundImageView.image = backgroundPicture
+        }
+        
+        //set price label
+        if let price = classPrice {
+            priceLabel.text = classPrice?.description
+        }
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +41,27 @@ class PaymentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func addFriend() {
+        
+        // add friend to your workout class
+        
+    }
+    
+    @IBAction func applyPromoCode() {
+        
+        // check validity of promotion code
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "joinClassSegue" {
+            
+        }
+        
+    }
+    
+    
     /*
     // MARK: - Navigation
 

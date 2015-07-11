@@ -13,6 +13,7 @@
 		29586C631B519B5600FD5740 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29586C621B519B5600FD5740 /* Images.xcassets */; };
 		29586C661B519B5600FD5740 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29586C641B519B5600FD5740 /* LaunchScreen.xib */; };
 		29586C721B519B5600FD5740 /* BodyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29586C711B519B5600FD5740 /* BodyTests.swift */; };
+		C4C4F4321B51BF6A00477589 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4F4311B51BF6A00477589 /* PaymentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		29586C6B1B519B5600FD5740 /* BodyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BodyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		29586C701B519B5600FD5740 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29586C711B519B5600FD5740 /* BodyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyTests.swift; sourceTree = "<group>"; };
+		C4C4F4311B51BF6A00477589 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		29586C581B519B5600FD5740 /* Body */ = {
 			isa = PBXGroup;
 			children = (
+				C4C4F4311B51BF6A00477589 /* PaymentViewController.swift */,
 				29586C5B1B519B5600FD5740 /* AppDelegate.swift */,
 				29586C5D1B519B5600FD5740 /* SelectionViewController.swift */,
 				29586C5F1B519B5600FD5740 /* Main.storyboard */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29586C5E1B519B5600FD5740 /* SelectionViewController.swift in Sources */,
+				C4C4F4321B51BF6A00477589 /* PaymentViewController.swift in Sources */,
 				29586C5C1B519B5600FD5740 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +415,7 @@
 				29586C771B519B5600FD5740 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		29586C781B519B5600FD5740 /* Build configuration list for PBXNativeTarget "BodyTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				29586C7A1B519B5600FD5740 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
