@@ -23,9 +23,9 @@ class PaymentViewController: UIViewController {
         super.viewDidLoad()
         
         // set background
-        if let picture = backgroundPicture {
-            backgroundImageView.image = backgroundPicture
-        }
+//        if let picture = backgroundPicture {
+//            backgroundImageView.image = picture
+//        }
         
         //set price label
         if let price = classPrice {
