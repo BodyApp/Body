@@ -23,11 +23,6 @@ class PaymentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // set background
-//        if let picture = backgroundPicture {
-//            backgroundImageView.image = picture
-//        }
-        
         //set price label
         if let price = classPrice {
             priceLabel.text = classPrice?.description

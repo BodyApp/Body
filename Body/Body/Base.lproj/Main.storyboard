@@ -40,9 +40,9 @@
                             <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bod-hx-hXF">
                                 <rect key="frame" x="0.0" y="509" width="1024" height="259"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2n6-gw-D2D">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2n6-gw-D2D">
                                         <rect key="frame" x="8" y="-3" width="246" height="78.5"/>
-                                        <color key="backgroundColor" red="0.094117647060000004" green="0.1450980392" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.043137254901960784" green="0.10196078431372549" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="2Fp-99-Hfj"/>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="keU-VH-eHF"/>
@@ -52,33 +52,45 @@
                                         <state key="normal" title="Crossfit">
                                             <color key="titleColor" red="1" green="1" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="workoutTypeButtonPushed:" destination="jTd-5E-8fo" eventType="touchUpInside" id="VYR-B8-qQN"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gg-ZV-BK4">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gg-ZV-BK4">
                                         <rect key="frame" x="262" y="-3" width="246" height="78.5"/>
-                                        <color key="backgroundColor" red="0.094117647060000004" green="0.1450980392" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.043137254901960784" green="0.10196078431372549" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
                                         <state key="normal" title="Bootcamp">
                                             <color key="titleColor" red="1" green="1" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="workoutTypeButtonPushed:" destination="jTd-5E-8fo" eventType="touchUpInside" id="7SY-li-x2T"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqN-IY-Gkh">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqN-IY-Gkh">
                                         <rect key="frame" x="516" y="-3" width="246" height="78.5"/>
-                                        <color key="backgroundColor" red="0.094117647060000004" green="0.1450980392" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.043137254901960784" green="0.10196078431372549" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
                                         <state key="normal" title="Yoga">
                                             <color key="titleColor" red="1" green="1" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="workoutTypeButtonPushed:" destination="jTd-5E-8fo" eventType="touchUpInside" id="1Qj-mz-6l2"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0uM-nL-rFy">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0uM-nL-rFy">
                                         <rect key="frame" x="770" y="-3" width="246" height="78.5"/>
-                                        <color key="backgroundColor" red="0.094117647060000004" green="0.1450980392" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.043137254901960784" green="0.10196078431372549" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
                                         <state key="normal" title="Pilates">
                                             <color key="titleColor" red="1" green="1" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="workoutTypeButtonPushed:" destination="jTd-5E-8fo" eventType="touchUpInside" id="40X-vO-I0f"/>
+                                        </connections>
                                     </button>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6z4-5a-66u">
                                         <rect key="frame" x="344" y="179" width="317" height="31"/>
@@ -193,15 +205,15 @@ Level 1 - 95, 45, singles10</string>
                                     <constraint firstItem="aUi-qT-PDI" firstAttribute="top" secondItem="cPi-HA-Uhv" secondAttribute="top" constant="31" id="wCT-tI-1ts"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uuv-MM-lbq">
-                                <rect key="frame" x="314" y="154" width="397" height="86"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uuv-MM-lbq">
+                                <rect key="frame" x="264" y="153" width="497" height="86"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="397" id="Y2f-Fg-Caj"/>
+                                    <constraint firstAttribute="width" constant="425" id="Y2f-Fg-Caj"/>
                                     <constraint firstAttribute="height" constant="86" id="dMs-Kb-OOe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="35"/>
-                                <state key="normal" title="Book Class for $10">
+                                <state key="normal" title="Book Crossfit for $10">
                                     <color key="titleColor" red="0.094117647058823528" green="0.14509803921568626" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -212,6 +224,7 @@ Level 1 - 95, 45, singles10</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Uuv-MM-lbq" secondAttribute="centerX" id="9nz-fv-cZ8"/>
                             <constraint firstItem="cPi-HA-Uhv" firstAttribute="leading" secondItem="LOz-uH-D7y" secondAttribute="leading" id="FJ0-zO-tJb"/>
                             <constraint firstAttribute="trailing" secondItem="cPi-HA-Uhv" secondAttribute="trailing" id="Hlb-uQ-wxz"/>
                             <constraint firstItem="Bod-hx-hXF" firstAttribute="top" secondItem="cPi-HA-Uhv" secondAttribute="bottom" constant="8" id="M7M-jP-pbs"/>
@@ -219,7 +232,6 @@ Level 1 - 95, 45, singles10</string>
                             <constraint firstItem="Bod-hx-hXF" firstAttribute="leading" secondItem="LOz-uH-D7y" secondAttribute="leading" id="Toy-ID-yC5"/>
                             <constraint firstItem="K7A-ct-gBV" firstAttribute="leading" secondItem="LOz-uH-D7y" secondAttribute="leading" id="Xnd-i6-YaQ"/>
                             <constraint firstAttribute="trailing" secondItem="K7A-ct-gBV" secondAttribute="trailing" id="ZaG-l6-QUB"/>
-                            <constraint firstItem="Uuv-MM-lbq" firstAttribute="leading" secondItem="LOz-uH-D7y" secondAttribute="leading" constant="314" id="hJO-Rh-cWb"/>
                             <constraint firstItem="0SO-l0-9cD" firstAttribute="top" secondItem="Bod-hx-hXF" secondAttribute="bottom" id="hWg-0U-U8z"/>
                             <constraint firstItem="Bod-hx-hXF" firstAttribute="top" secondItem="K7A-ct-gBV" secondAttribute="bottom" constant="8" id="n0Q-jr-tvZ"/>
                             <constraint firstItem="Uuv-MM-lbq" firstAttribute="top" secondItem="xAU-cs-qgc" secondAttribute="bottom" constant="90" id="pMy-rc-QS2"/>
@@ -232,7 +244,11 @@ Level 1 - 95, 45, singles10</string>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="bookNowButton" destination="Uuv-MM-lbq" id="O86-jz-qv0"/>
+                        <outlet property="bootcampButton" destination="6gg-ZV-BK4" id="777-aD-aea"/>
+                        <outlet property="crossfitButton" destination="2n6-gw-D2D" id="79M-cm-yx6"/>
+                        <outlet property="pilatesButton" destination="0uM-nL-rFy" id="iru-rh-hUr"/>
                         <outlet property="trainerTypeSlider" destination="6z4-5a-66u" id="MZ1-4k-voM"/>
+                        <outlet property="yogaButton" destination="vqN-IY-Gkh" id="DfV-2B-n97"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o88-uO-CS6" userLabel="First Responder" sceneMemberID="firstResponder"/>
