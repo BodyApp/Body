@@ -11,65 +11,44 @@ import UIKit
 class SelectionViewController: UIViewController {
 
     @IBOutlet weak var bookNowButton: UIButton!
-    @IBOutlet weak var trainerTypeSegmentedController: UISegmentedControl!
-    @IBOutlet weak var workoutTypeSlider: UISlider!
-    @IBOutlet weak var workoutTypeLabel: UILabel!
-    @IBOutlet weak var workoutControlsBackground: UIView!
+    @IBOutlet weak var trainerTypeSlider: UISlider!
     
     var price: Double?
     let chooseClassInstance = ChooseClass()
     var workoutTypes = [String]()
     let paymentSegue = "SegueToPaymentConfirmation"
+    var workoutSelected = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        workoutControlsBackground.layer.cornerRadius = 20
-        trainerTypeSegmentedController.layer.cornerRadius = 5
         bookNowButton.layer.cornerRadius = 10
-        
         workoutTypes = chooseClassInstance.getWorkoutTypes()
-        workoutTypeSlider.setValue(2.0, animated: false)
-        let workoutSelected = Int(self.workoutTypeSlider.value)
-        workoutTypeLabel.text = workoutTypes[workoutSelected]
-        workoutTypeSlider.maximumValue = Float(workoutTypes.count-1)
-
-        refreshButtonText()
-    }
-
-    @IBAction func segmentedControlDidChange(sender: UISegmentedControl) {
-        self.refreshButtonText()
+        
+        
     }
     
     @IBAction func sliderViewChanged(sender: UISlider) {
-        var valToSet = roundf(workoutTypeSlider.value)
-        workoutTypeSlider.setValue(valToSet, animated: true)
-        let workoutSelected = Int(self.workoutTypeSlider.value)
-        workoutTypeLabel.text = workoutTypes[workoutSelected]
+        var valToSet = roundf(trainerTypeSlider.value)
+        trainerTypeSlider.setValue(valToSet, animated: true)
         
-        self.refreshButtonText()
+        switch trainerTypeSlider.value {
+            case 0: bookNowButton.setTitle("Book Class for $10", forState: UIControlState.Normal)
+            case 1: bookNowButton.setTitle("Book Class for $20", forState: UIControlState.Normal)
+            default: break
+        }
     }
     
     @IBAction func bookNowButtonPushed(sender: UIButton) {
         self.performSegueWithIdentifier(paymentSegue, sender: self)
     }
     
-    func refreshButtonText() {
-        if let workoutTypeText = workoutTypeLabel.text {
-            switch trainerTypeSegmentedController.selectedSegmentIndex {
-            case 0: bookNowButton.setTitle("Book \(workoutTypeText) with Trainer X for $10", forState: UIControlState.Normal)
-            case 1: bookNowButton.setTitle("Book \(workoutTypeText) with Trainer Pro for $20", forState: UIControlState.Normal)
-            default: break
-            }
-        }
-    }
-    
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == paymentSegue {
-//            if let destination = segue.destinationViewController as? PaymentViewController {
+            if let destination = segue.destinationViewController as? PaymentViewController {
 //                destination.classPrice = classPrice
-//            }
+//                destination.classType = workoutSelected
+            }
         }
     }
     

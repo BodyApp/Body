@@ -9,7 +9,7 @@
 import Foundation
 
 class ChooseClass {
-    var workoutTypes = ["Yoga", "Crossfit", "Pilates", "Bootcamp"]
+    var workoutTypes = ["Crossfit", "Bootcamp", "Yoga", "Pilates"]
     var trainerTypes = ["Trainer X", "Trainer Pro"]
     
     func getWorkoutTypes() -> [String] {
