@@ -10,38 +10,41 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BodyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="bLu-Xs-5wc">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homehero" translatesAutoresizingMaskIntoConstraints="NO" id="dum-qw-IGe">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACHIEVE ANYTHING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7F-bM-9rL">
+                    <rect key="frame" x="159" y="300.5" width="163.5" height="23.5"/>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BodyLogo_white" translatesAutoresizingMaskIntoConstraints="NO" id="bLu-Xs-5wc">
                     <rect key="frame" x="102" y="188" width="277" height="104"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="104" id="2wm-av-n1O"/>
                         <constraint firstAttribute="width" constant="277" id="TaJ-qI-ODx"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACHIEVE ANYTHING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7F-bM-9rL">
-                    <rect key="frame" x="159" y="300" width="163.5" height="23.5"/>
-                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="bLu-Xs-5wc" secondAttribute="centerX" id="2fH-pR-H7p"/>
+                <constraint firstAttribute="bottom" secondItem="dum-qw-IGe" secondAttribute="bottom" id="2lX-2v-hwL"/>
                 <constraint firstAttribute="centerX" secondItem="m7F-bM-9rL" secondAttribute="centerX" constant="-0.5" id="Ee7-Qm-dY2"/>
+                <constraint firstItem="dum-qw-IGe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="I09-6s-Ctw"/>
                 <constraint firstAttribute="centerY" secondItem="bLu-Xs-5wc" secondAttribute="centerY" id="Onw-PR-Yqh"/>
                 <constraint firstItem="m7F-bM-9rL" firstAttribute="top" secondItem="bLu-Xs-5wc" secondAttribute="bottom" constant="8" id="T3K-re-M36"/>
+                <constraint firstAttribute="trailing" secondItem="dum-qw-IGe" secondAttribute="trailing" id="flj-5r-2qp"/>
+                <constraint firstItem="dum-qw-IGe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wY5-mG-GqI"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
-        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6pK-cP-IEf">
-            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <point key="canvasLocation" x="548" y="318"/>
-        </imageView>
     </objects>
     <resources>
-        <image name="BodyLogo" width="514" height="193"/>
+        <image name="BodyLogo_white" width="514" height="193"/>
+        <image name="homehero" width="1400" height="1038"/>
     </resources>
 </document>
