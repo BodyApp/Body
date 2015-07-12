@@ -25,6 +25,7 @@ class SelectionViewController: UIViewController {
     var workoutSelected = 0
     var previouslySelected = 0
     var workoutTypes = [String]()
+    var selectedWorkoutString = String()
     var price = 10
     
     override func viewDidLoad() {
@@ -49,7 +50,8 @@ class SelectionViewController: UIViewController {
         sender.layer.borderWidth = 3.0
         sender.layer.borderColor = UIColor(red:0.038, green:0.095, blue:0.283, alpha:1).CGColor
         
-        bookNowButton.setTitle("Book \(workoutTypes[workoutSelected]) for $\(price)", forState: UIControlState.Normal)
+        selectedWorkoutString = workoutTypes[workoutSelected]
+        bookNowButton.setTitle("Book \(selectedWorkoutString) for $\(price)", forState: UIControlState.Normal)
         
         switch previouslySelected {
         case 0:
@@ -87,7 +89,8 @@ class SelectionViewController: UIViewController {
             case 1: price = 20
             default: break
         }
-        bookNowButton.setTitle("Book \(workoutTypes[workoutSelected]) for $\(price)", forState: UIControlState.Normal)
+
+        bookNowButton.setTitle("Book \(selectedWorkoutString) for $\(price)", forState: UIControlState.Normal)
     }
     
     @IBAction func bookNowButtonPushed(sender: UIButton) {
@@ -98,8 +101,9 @@ class SelectionViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == paymentSegue {
             if let destination = segue.destinationViewController as? PaymentViewController {
-//                destination.classPrice = classPrice
-//                destination.classType = workoutSelected
+                destination.price = price
+                destination.trainerType = Int(trainerTypeSlider.value)
+                destination.workoutType = selectedWorkoutString
             }
         }
     }

@@ -10,65 +10,36 @@ import UIKit
 
 class PaymentViewController: UIViewController {
     
-    @IBOutlet weak var backgroundImageView: UIImageView!
-    @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var promoCodeText: UITextField!
-    @IBOutlet weak var joinClassButton: UIButton!
-    
-    
-    var classPrice : Double?
-    var backgroundPicture : UIImage?
-    let tipsSegue = "SegueToTips"
+    var price = 10
+    var trainerType = 0
+    var trainerTypeString = String()
+    var workoutType = String()
+    var chooseClassInstance = ChooseClass()
 
+    @IBOutlet weak var creditCardTextField: UITextView!
+    @IBOutlet weak var promoCodeTextField: UITextView!
+    @IBOutlet weak var inviteFriendsButton: UIButton!
+    @IBOutlet weak var trainerTypeWorkoutTypeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        creditCardTextField.layer.borderWidth = 1
+        creditCardTextField.layer.borderColor = UIColor(red:0.652, green:0.667, blue:0.66, alpha:1).CGColor
         
-        //set price label
-        if let price = classPrice {
-            priceLabel.text = classPrice?.description
-        }
+        promoCodeTextField.layer.borderWidth = 1
+        promoCodeTextField.layer.borderColor = UIColor(red:0.652, green:0.667, blue:0.66, alpha:1).CGColor
         
+        inviteFriendsButton.layer.borderWidth = 3
+        inviteFriendsButton.layer.borderColor = UIColor(red:0.038, green:0.095, blue:0.283, alpha:1).CGColor
+        
+        var trainerTypes = chooseClassInstance.getTrainerTypes()
+        trainerTypeString = trainerTypes[trainerType]
+        
+        var trainerTypeArray = split(trainerTypeString) {$0 == " "}
+        trainerTypeWorkoutTypeLabel.text = "\(workoutType) \(trainerTypeArray[1])"
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func addFriend() {
-        
-        // add friend to your workout class
-        
-    }
-    
-    @IBAction func applyPromoCode() {
-        
-        // check validity of promotion code
-        
-    }
-    
-    @IBAction func joinClassButton(sender: AnyObject) {
-
-        
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        if segue.identifier == "SegueToTips" {
-            
-        }
-        
-    }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
