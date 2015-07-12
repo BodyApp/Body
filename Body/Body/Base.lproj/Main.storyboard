@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kYd-r0-bda">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kYd-r0-bda">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -114,14 +114,13 @@
                                     <constraint firstAttribute="width" constant="333" id="YFR-A4-CYn"/>
                                     <constraint firstAttribute="height" constant="50" id="uU8-il-Mkc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="Book Now for $x">
                                     <color key="titleColor" red="1" green="1" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="bookNowButtonPushed:" destination="jTd-5E-8fo" eventType="touchUpInside" id="6FC-et-Afp"/>
-                                    <segue destination="aJN-El-GoR" kind="show" identifier="SegueToPaymentConfirmation" id="KIZ-uo-GUR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -156,6 +155,7 @@
                         <outlet property="workoutControlsBackground" destination="Bod-hx-hXF" id="4Jq-By-yDh"/>
                         <outlet property="workoutTypeLabel" destination="a7f-Jo-K19" id="sN6-Py-hYy"/>
                         <outlet property="workoutTypeSlider" destination="6z4-5a-66u" id="8By-nL-Xin"/>
+                        <segue destination="aJN-El-GoR" kind="show" identifier="SegueToPaymentConfirmation" id="Qdf-o7-jPo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o88-uO-CS6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -192,6 +192,7 @@
                                     <segue destination="ttR-75-mDN" kind="show" identifier="SegueToTips" id="xwk-vL-G9f"/>
                                 </connections>
                             </button>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ON-VF-aTQ">
                                 <rect key="frame" x="351" y="390" width="46" height="30"/>
                                 <constraints>
@@ -214,6 +215,9 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[promo code success]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moa-0P-OgM">
+=======
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[promo code success]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moa-0P-OgM">
+>>>>>>> 88ee5a52f581da43c8bb501a616adebc99eb87a7
                                 <rect key="frame" x="405" y="394" width="170" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="fXi-MQ-wh5"/>
