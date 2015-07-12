@@ -241,11 +241,35 @@ Level 1 - 95, 45, singles10</string>
                         <outlet property="trainerTypeSlider" destination="6z4-5a-66u" id="MZ1-4k-voM"/>
                         <outlet property="yogaButton" destination="vqN-IY-Gkh" id="DfV-2B-n97"/>
                         <segue destination="R9e-jz-Lc0" kind="push" identifier="SegueToPaymentConfirmation" id="ME9-ur-CII"/>
+                        <segue destination="FP2-qr-6ay" kind="modal" identifier="LoginModal" modalPresentationStyle="pageSheet" modalTransitionStyle="flipHorizontal" id="LkJ-Tt-H2X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o88-uO-CS6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2475" y="291"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="vFB-04-gVw">
+            <objects>
+                <viewController storyboardIdentifier="LoginView" modalPresentationStyle="overCurrentContext" id="FP2-qr-6ay" customClass="LoginViewController" customModule="Body" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5iK-sR-7Kp"/>
+                        <viewControllerLayoutGuide type="bottom" id="56W-vL-mYn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4J6-TD-Ldn">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jda-PM-bl2"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="500" height="300"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="500" height="300"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QNu-kM-10Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2475" y="1163"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="rek-vO-or9">

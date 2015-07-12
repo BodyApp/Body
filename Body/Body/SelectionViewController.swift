@@ -8,8 +8,9 @@
 
 import UIKit
 import QuartzCore
+import TwitterKit
 
-class SelectionViewController: UIViewController {
+class SelectionViewController: UIViewController, UIPopoverPresentationControllerDelegate {
 
     @IBOutlet weak var bookNowButton: UIButton!
     @IBOutlet weak var trainerTypeSlider: UISlider!
@@ -28,6 +29,8 @@ class SelectionViewController: UIViewController {
     var selectedWorkoutString = "Crossfit"
     var price = 10
     
+    var twitterInstance = Twitter.sharedInstance()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         workoutTypes = chooseClassInstance.getWorkoutTypes()
@@ -39,6 +42,34 @@ class SelectionViewController: UIViewController {
         crossfitButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         crossfitButton.layer.borderWidth = 3.0
         crossfitButton.layer.borderColor = UIColor(red:0.038, green:0.095, blue:0.283, alpha:1).CGColor
+        
+//        var popoverContent = self.storyboard?.instantiateViewControllerWithIdentifier("LoginView") as! UIViewController
+//        var nav = UINavigationController(rootViewController: popoverContent)
+//        nav.modalPresentationStyle = UIModalPresentationStyle.Popover
+//        var popover = nav.popoverPresentationController
+//        popoverContent.preferredContentSize = CGSizeMake(500,600)
+//        popover!.delegate = self
+//        popover!.sourceView = self.view
+//        popover!.sourceRect = CGRectMake(200,100,0,0)
+//        
+//        self.presentViewController(nav, animated: true, completion: nil)
+        
+        self.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        self.modalPresentationStyle = .CurrentContext
+        self.presentViewController(LoginViewController(), animated: true, completion: nil)
+        
+//        navigationController?.setNavigationBarHidden(false, animated:true)
+//        var myBackButton:UIButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+//        var image = UIImage(named: "icon_crossfit")
+//        image.size.height
+//        image.size.width
+//        myBackButton.setImage(image, forState: UIControlState.Normal)
+////        myBackButton.setTitle("< Quests", forState: UIControlState.Normal)
+////        myBackButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+//        myBackButton.sizeToFit()
+//        
+//        var myCustomBackButtonItem:UIBarButtonItem = UIBarButtonItem(customView: myBackButton)
+//        self.navigationItem.leftBarButtonItem  = myCustomBackButtonItem
     }
     
     @IBAction func workoutTypeButtonPushed(sender: UIButton) {
