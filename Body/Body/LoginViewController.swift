@@ -20,7 +20,6 @@ class LoginViewController: UIViewController {
         
         let logInButton = TWTRLogInButton(logInCompletion: {
             (session: TWTRSession!, error: NSError!) in
-            println(session.userName)
             self.dismissViewControllerAnimated(true, completion: nil)
         })
         
@@ -29,7 +28,6 @@ class LoginViewController: UIViewController {
         
         let authenticateButton = DGTAuthenticateButton(authenticationCompletion: {
             (session: DGTSession!, error: NSError!) in
-            println(session)
             self.dismissViewControllerAnimated(true, completion: nil)
         })
         authenticateButton.center = CGPoint(x: centerOfView.x, y: centerOfView.y + 25)

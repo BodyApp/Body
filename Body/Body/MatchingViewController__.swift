@@ -1,5 +1,5 @@
 //
-//  ResultsViewController.swift
+//  TipsViewController.swift
 //  Body
 //
 //  Created by Peter Li on 7/11/15.
@@ -8,31 +8,35 @@
 
 import UIKit
 
-class ResultsViewController: UIViewController {
+class MatchingViewController: UIViewController {
     
-    @IBOutlet weak var caloriesLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var typeLabel: UILabel!
+    let matchedSegue = "SegueToMatched"
+    var timer = NSTimer()
     
-    var weight : String?
-    var time : String?
-    var level : String?
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        caloriesLabel.text = "252cal"
+        // starts the timer immediately, no repeat, calls timerFinished once time ends
 
-        if let workoutTime = time {
-            timeLabel.text = time
-        }
+        timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("timerFinished:"), userInfo: nil, repeats: false)
         
-        // Do any additional setup after loading the view.
+    }
+    
+    func timerFinished(timer: NSTimer) {
+    
+        // invalidate timer, ensure that it doesn't continue to run
+//        timer.invalidate()
+        performSegueWithIdentifier(matchedSegue, sender: self)
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        timer.invalidate()
     }
     
 
