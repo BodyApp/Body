@@ -25,7 +25,7 @@ class SelectionViewController: UIViewController {
     var workoutSelected = 0
     var previouslySelected = 0
     var workoutTypes = [String]()
-    var selectedWorkoutString = String()
+    var selectedWorkoutString = "Crossfit"
     var price = 10
     
     override func viewDidLoad() {
