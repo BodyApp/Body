@@ -18,6 +18,7 @@ class PaymentViewController: UIViewController {
     
     var classPrice : Double?
     var backgroundPicture : UIImage?
+    let tipsSegue = "SegueToTips"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +32,6 @@ class PaymentViewController: UIViewController {
         if let price = classPrice {
             priceLabel.text = classPrice?.description
         }
-        
-        
         
     }
 
@@ -53,9 +52,14 @@ class PaymentViewController: UIViewController {
         
     }
     
+    @IBAction func joinClassButton(sender: AnyObject) {
+
+        
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "joinClassSegue" {
+        if segue.identifier == "SegueToTips" {
             
         }
         

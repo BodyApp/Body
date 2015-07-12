@@ -13,8 +13,10 @@
 		29586C631B519B5600FD5740 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29586C621B519B5600FD5740 /* Images.xcassets */; };
 		29586C661B519B5600FD5740 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29586C641B519B5600FD5740 /* LaunchScreen.xib */; };
 		29586C721B519B5600FD5740 /* BodyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29586C711B519B5600FD5740 /* BodyTests.swift */; };
-		C4C4F4321B51BF6A00477589 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4F4311B51BF6A00477589 /* PaymentViewController.swift */; };
 		29586C7C1B51BF7E00FD5740 /* ChooseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29586C7B1B51BF7E00FD5740 /* ChooseClass.swift */; };
+		C4451DC11B51D4B5003FB65F /* RateInstructorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4451DC01B51D4B5003FB65F /* RateInstructorViewController.swift */; };
+		C4451DC31B51E153003FB65F /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4451DC21B51E153003FB65F /* ResultsViewController.swift */; };
+		C4C4F4321B51BF6A00477589 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4F4311B51BF6A00477589 /* PaymentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +40,10 @@
 		29586C6B1B519B5600FD5740 /* BodyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BodyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		29586C701B519B5600FD5740 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29586C711B519B5600FD5740 /* BodyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyTests.swift; sourceTree = "<group>"; };
-		C4C4F4311B51BF6A00477589 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		29586C7B1B51BF7E00FD5740 /* ChooseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseClass.swift; sourceTree = "<group>"; };
+		C4451DC01B51D4B5003FB65F /* RateInstructorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateInstructorViewController.swift; sourceTree = "<group>"; };
+		C4451DC21B51E153003FB65F /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		C4C4F4311B51BF6A00477589 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 				C4C4F4311B51BF6A00477589 /* PaymentViewController.swift */,
 				29586C5B1B519B5600FD5740 /* AppDelegate.swift */,
 				29586C5D1B519B5600FD5740 /* SelectionViewController.swift */,
+				C4451DC01B51D4B5003FB65F /* RateInstructorViewController.swift */,
+				C4451DC21B51E153003FB65F /* ResultsViewController.swift */,
 				29586C7B1B51BF7E00FD5740 /* ChooseClass.swift */,
 				29586C5F1B519B5600FD5740 /* Main.storyboard */,
 				29586C621B519B5600FD5740 /* Images.xcassets */,
@@ -218,10 +224,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4451DC11B51D4B5003FB65F /* RateInstructorViewController.swift in Sources */,
 				29586C7C1B51BF7E00FD5740 /* ChooseClass.swift in Sources */,
 				29586C5E1B519B5600FD5740 /* SelectionViewController.swift in Sources */,
 				C4C4F4321B51BF6A00477589 /* PaymentViewController.swift in Sources */,
 				29586C5C1B519B5600FD5740 /* AppDelegate.swift in Sources */,
+				C4451DC31B51E153003FB65F /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
